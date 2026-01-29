@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FACES DA FÉ | 16ª Edição</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300;400;700;900&family=Merryweather:ital,wght@0,300;0,700;1,300&family=Oswald:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div id="home-view">
+      <header id="main-header">
+        <div class="header-branding">
+          <h1 class="brand-title">FACES DA FÉ</h1>
+          <span class="edition-tag">ED. 16</span>
+        </div>
+        <nav class="editorial-nav">
+          <ul>
+            <li style="--nav-theme: var(--gold-deep)">
+              <a href="#catolicismo">Catolicismo</a>
+            </li>
+            <li style="--nav-theme: var(--red-deep)">
+              <a href="#matriz-africana">Matriz Africana</a>
+            </li>
+            <li style="--nav-theme: var(--orange-deep)">
+              <a href="#sincretismo">Sincretismo</a>
+            </li>
+            <li style="--nav-theme: var(--yellow-deep)">
+              <a href="#pluralidade">Pluralidade</a>
+            </li>
+            <li style="--nav-theme: #111">
+              <a href="#especiais">Especiais (Docs)</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content-modern">
+          <h2 class="hero-headline">FACES DA FÉ</h2>
+          <div class="hero-divider"></div>
+          <p class="hero-subline">
+            Uma imersão editorial nas manifestações culturais de Sergipe.
+          </p>
+        </div>
+      </section>
+
+      <main class="editorial-main">
+        <section id="catolicismo" class="editorial-section theme-gold">
+          <div class="section-title-block">
+            <h2 class="section-headline">CATOLICISMO</h2>
+            <div class="section-bar"></div>
+          </div>
+          <div class="editorial-grid" id="grid-catolicismo"></div>
+        </section>
+
+        <section
+          id="matriz-africana"
+          class="editorial-section theme-red dark-mode"
+        >
+          <div class="section-title-block">
+            <h2 class="section-headline">MATRIZ AFRICANA</h2>
+            <div class="section-bar"></div>
+          </div>
+          <div class="editorial-grid" id="grid-matriz-africana"></div>
+        </section>
+
+        <section id="sincretismo" class="editorial-section theme-orange">
+          <div class="section-title-block">
+            <h2 class="section-headline">SINCRETISMO</h2>
+            <div class="section-bar"></div>
+          </div>
+          <div class="editorial-grid" id="grid-sincretismo"></div>
+        </section>
+
+        <section id="pluralidade" class="editorial-section theme-yellow">
+          <div class="section-title-block">
+            <h2 class="section-headline">PLURA<br />LIDADE</h2>
+            <div class="section-bar"></div>
+          </div>
+          <div class="editorial-grid" id="grid-pluralidade"></div>
+        </section>
+
+        <section id="especiais" class="editorial-section theme-dark">
+          <div class="section-title-block">
+            <h2 class="section-headline text-white">ESPECIAIS</h2>
+            <p
+              style="
+                color: #999;
+                font-family: var(--font-body);
+                margin-top: 10px;
+              "
+            >
+              DOCUMENTÁRIOS EXCLUSIVOS
+            </p>
+          </div>
+          <div class="cinema-grid" id="grid-especiais"></div>
+        </section>
+      </main>
+
+      <footer class="podcast-bar-minimal">
+        <div class="podcast-info-min">
+          <i class="ph-fill ph-vinyl-record spin-icon"></i>
+          <span class="pod-label">NO AR:</span>
+          <strong class="pod-track">Devoção em Tom Maior — Ep. 01</strong>
+        </div>
+        <div class="podcast-controls-min">
+          <button><i class="ph-fill ph-play"></i></button>
+        </div>
+      </footer>
+    </div>
+
+    <article id="article-view" class="hidden">
+      <button id="back-btn" onclick="closeArticle()">
+        <i class="ph ph-arrow-left"></i> VOLTAR
+      </button>
+
+      <header class="article-header-hero" id="art-hero">
+        <div class="art-hero-bg" id="art-img"></div>
+        <div class="art-hero-overlay"></div>
+        <div class="art-hero-content">
+          <span class="art-category" id="art-cat">CATEGORIA</span>
+          <h1 class="art-title" id="art-title">TÍTULO DA MATÉRIA</h1>
+          <p class="art-subtitle" id="art-subtitle">
+            Subtítulo da matéria vai aqui.
+          </p>
+        </div>
+      </header>
+
+      <div class="article-body-container">
+        <div class="article-meta">
+          <span>Por <strong>Redação Contexto</strong></span>
+          <span>•</span>
+          <span>12 min de leitura</span>
+        </div>
+
+        <div class="article-text" id="art-body"></div>
+      </div>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
