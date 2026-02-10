@@ -2,23 +2,23 @@ const content = [
   {
     category: "catolicismo",
     id: "c1",
-    title: "CHEGANÇA: MAR EM TERRA",
-    subtitle:
-      "A tradição que navega pelas ruas de Sergipe mantendo viva a memória das batalhas marítimas.",
-    img: "https://images.unsplash.com/photo-1543615699-270387537b06?w=1200",
-    feature: true,
-    themeColor: "var(--gold-deep)",
-  },
-  {
-    category: "catolicismo",
-    id: "c2",
     title: "SÃO GONÇALO",
     subtitle:
       "A dança da devoção e promessa que atravessa gerações no interior do estado.",
-    img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200",
-    feature: false,
+    img: "/assets/sao_goncalo/img01.jpg",
+    feature: true,
     themeColor: "var(--gold-deep)",
   },
+  // {
+  //   category: "catolicismo",
+  //   id: "c2",
+  //   title: "SÃO GONÇALO",
+  //   subtitle:
+  //     "A dança da devoção e promessa que atravessa gerações no interior do estado.",
+  //   img: "/assets/sao_goncalo/img01.jpg",
+  //   feature: false,
+  //   themeColor: "var(--gold-deep)",
+  // },
   {
     category: "catolicismo",
     id: "c3",
@@ -112,8 +112,16 @@ function renderSite() {
       const items = content.filter((p) => p.category === cat);
       items.forEach((item) => {
         const featureClass = item.feature ? "feature" : "";
+
+        let clickAction = `openArticle('${item.id}')`;
+
+        if (item.id === "c2") {
+          clickAction =
+            "window.location.href='conteudos/sao-goncalo/index.html'";
+        }
+
         grid.innerHTML += `
-                    <article class="article-block ${featureClass}" onclick="openArticle('${item.id}')">
+                    <article class="article-block ${featureClass}" onclick="${clickAction}">
                         <div class="article-img-box">
                             <img src="${item.img}" alt="${item.title}" loading="lazy">
                         </div>
