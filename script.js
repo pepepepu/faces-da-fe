@@ -115,7 +115,7 @@ function renderSite() {
 
         let clickAction = `openArticle('${item.id}')`;
 
-        if (item.id === "c2") {
+        if (item.id === "c1") {
           clickAction =
             "window.location.href='conteudos/sao-goncalo/index.html'";
         }
@@ -201,3 +201,4 @@ function generateLoremIpsum() {
 document.addEventListener("DOMContentLoaded", () => {
   renderSite();
 });
+
